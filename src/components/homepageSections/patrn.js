@@ -18,6 +18,7 @@ import {
 import prafullaSharma from "../../assets/images/faculty/prafulla sharma .jpg";
 import nishikant from "../../assets/images/faculty/nishikant.webp";
 import pankajrai from "../../assets/images/faculty/pankajrai.webp";
+import prashantmalvia from "../../assets/images/faculty/prashantmalvia.webp"
 
 const PatronageSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,12 +52,23 @@ const PatronageSection = () => {
     },
     {
       id: 3,
-      name: "Dr. Nishikant Kumar",
+      name: "Dr. Nishikant Kisku",
       position: "Professor In-charge",
       institution: "ACE BIT Sindri",
       location: "Dhanbad, Jharkhand",
       image: nishikant,
       quote: "I want to express my deepest gratitude to both students and faculty for their invaluable contributions to our academic community. Thank you for your tireless efforts and involvement in our activities and events.",
+      rating: 5,
+      color: "from-rose-600 via-pink-600 to-fuchsia-600"
+    },
+    {
+      id: 4,
+      name: "Prashant Ranjan Malviya",
+      position: "Assistant Professor In-charge",
+      institution: "ACE BIT Sindri",
+      location: "Dhanbad, Jharkhand",
+      image: prashantmalvia,
+      quote: "I sincerely thank both our students and faculty for their invaluable contributions to our academic community. Your dedication, active participation, and tireless efforts in our activities and events are truly appreciated.",
       rating: 5,
       color: "from-rose-600 via-pink-600 to-fuchsia-600"
     }

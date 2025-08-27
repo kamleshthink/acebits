@@ -38,128 +38,110 @@ const Faculty = () => {
       name: "Dr. Prafulla Sharma",
       position: "Head of Department",
       image: prafullaSharma,
-      email: "prafulla.sharma@bitsindri.ac.in",
-      specialization: "Structural Engineering"
+      specialization: "Structural Engineering",
     },
     {
       name: "Dr. Jitu Kujur",
       position: "Professor",
       image: jituhod,
-      email: "jitu.kujur@bitsindri.ac.in",
-      specialization: "Structural Engineering"
+      specialization: "Structural Engineering",
     },
     {
       name: "Dr. Vikrama Pandey",
       position: "Professor",
       image: vikrama_pandey,
-      email: "vikrama.pandey@bitsindri.ac.in",
-      specialization: "Geotechnical Engineering"
+      specialization: "Geotechnical Engineering",
     },
     {
       name: "Dr. Sanjay Shukla",
       position: "Adjunct Professor",
       image: sanjay_shukla,
-      email: "sanjay.shukla@bitsindri.ac.in",
-      specialization: "Transportation Engineering"
+      specialization: "Transportation Engineering",
     },
     {
       name: "Dr. U.K. Singh",
       position: "Professor",
-      image: uksingh,
-      email: "uk.singh@bitsindri.ac.in",
-      specialization: "Water Resources Engineering"
+      image: uks,
+      specialization: "Water Resources Engineering",
     },
     {
       name: "Dr. Ranvijay Kumar",
       position: "Professor",
       image: ranvijay,
-      email: "ranvijay.kumar@bitsindri.ac.in",
-      specialization: "Environmental Engineering"
+      specialization: "Environmental Engineering",
     },
     {
       name: "Dr. Maya Ray",
       position: "Associate Professor",
-      image: mayaray,
-      email: "maya.ray@bitsindri.ac.in",
-      specialization: "Construction Management"
+      image: may,
+      specialization: "Construction Management",
     },
     {
       name: "Dr. B.D. Yadav",
       position: "Assistant Professor",
-      image: bdyadav,
-      email: "bd.yadav@bitsindri.ac.in",
-      specialization: "Structural Analysis"
+      image: bdy,
+      specialization: "Structural Analysis",
     },
     {
       name: "Dr. Sheo Kumar",
       position: "Assistant Professor",
-      image: sheokumar,
-      email: "sheo.kumar@bitsindri.ac.in",
-      specialization: "Surveying & GIS"
+      image: sheokum,
+      specialization: "Surveying & GIS",
     },
     {
       name: "Dr. Saroj Meena",
       position: "Assistant Professor",
-      image: sarojmeena,
-      email: "saroj.meena@bitsindri.ac.in",
-      specialization: "Hydraulics & Irrigation"
+      image: sarojmeen,
+      specialization: "Hydraulics & Irrigation",
     },
     {
       name: "Dr. Sumit Kumar",
       position: "Assistant Professor",
-      image: sumitkumar,
-      email: "sumit.kumar@bitsindri.ac.in",
-      specialization: "Concrete Technology"
+      image: sumitkuma,
+      specialization: "Concrete Technology",
     },
     {
       name: "Dr. Prakash Kumar",
       position: "Assistant Professor",
       image: prakash,
-      email: "prakash.kumar@bitsindri.ac.in",
-      specialization: "Soil Mechanics"
+      specialization: "Soil Mechanics",
     },
 
     {
       name: "Dr. Nishikant Kumar",
       position: "Assistant Professor",
       image: nishikant,
-      email: "nishikant.kumar@bitsindri.ac.in",
-      specialization: "Building Materials"
+      specialization: "Building Materials",
     },
     {
       name: "Dr. Prashant Malvia",
       position: "Assistant Professor",
       image: prashantmalvia,
-      email: "prashant.malvia@bitsindri.ac.in",
-      specialization: "Transportation Planning"
+      specialization: "Transportation Planning",
     },
     {
       name: "Dr. Nipen Das",
       position: "Assistant Professor",
-      image: nipendas,
-      email: "nipen.das@bitsindri.ac.in",
-      specialization: "Geotechnical Engineering"
+      image: nipen,
+      specialization: "Geotechnical Engineering",
     },
     {
       name: "Dr. Komal Kumari",
       position: "Assistant Professor",
       image: komal,
-      email: "komal.kumari@bitsindri.ac.in",
-      specialization: "Environmental Science"
+      specialization: "Environmental Science",
     },
     {
       name: "Dr. Iqbal Sheikh",
       position: "Assistant Professor",
       image: iqbal_sheikh,
-      email: "iqbal.sheikh@bitsindri.ac.in",
-      specialization: "Structural Dynamics"
+      specialization: "Structural Dynamics",
     },
     {
       name: "Dr. Abhijeet Anand",
       position: "Assistant Professor",
       image: abhijeet_anand,
-      email: "abhijeet.anand@bitsindri.ac.in",
-      specialization: "Construction Technology"
+      specialization: "Construction Technology",
     }
   ];
 
