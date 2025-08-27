@@ -38,110 +38,110 @@ const Faculty = () => {
       name: "Dr. Prafulla Sharma",
       position: "Head of Department",
       image: prafullaSharma,
-      specialization: "Structural Engineering",
+      specialization: "Structural Engineering"
     },
     {
       name: "Dr. Jitu Kujur",
       position: "Professor",
       image: jituhod,
-      specialization: "Structural Engineering",
+      specialization: "Structural Engineering"
     },
     {
       name: "Dr. Vikrama Pandey",
       position: "Professor",
       image: vikrama_pandey,
-      specialization: "Geotechnical Engineering",
+      specialization: "Geotechnical Engineering"
     },
     {
       name: "Dr. Sanjay Shukla",
       position: "Adjunct Professor",
       image: sanjay_shukla,
-      specialization: "Transportation Engineering",
+      specialization: "Transportation Engineering"
     },
     {
       name: "Dr. U.K. Singh",
       position: "Professor",
-      image: uks,
-      specialization: "Water Resources Engineering",
+      image: uksingh,
+      specialization: "Water Resources Engineering"
     },
     {
       name: "Dr. Ranvijay Kumar",
       position: "Professor",
       image: ranvijay,
-      specialization: "Environmental Engineering",
+      specialization: "Environmental Engineering"
     },
     {
       name: "Dr. Maya Ray",
       position: "Associate Professor",
-      image: may,
-      specialization: "Construction Management",
+      image: mayaray,
+      specialization: "Construction Management"
     },
     {
       name: "Dr. B.D. Yadav",
       position: "Assistant Professor",
-      image: bdy,
-      specialization: "Structural Analysis",
+      image: bdyadav,
+      specialization: "Structural Analysis"
     },
     {
       name: "Dr. Sheo Kumar",
       position: "Assistant Professor",
-      image: sheokum,
-      specialization: "Surveying & GIS",
+      image: sheokumar,
+      specialization: "Surveying & GIS"
     },
     {
       name: "Dr. Saroj Meena",
       position: "Assistant Professor",
-      image: sarojmeen,
-      specialization: "Hydraulics & Irrigation",
+      image: sarojmeena,
+      specialization: "Hydraulics & Irrigation"
     },
     {
       name: "Dr. Sumit Kumar",
       position: "Assistant Professor",
-      image: sumitkuma,
-      specialization: "Concrete Technology",
+      image: sumitkumar,
+      specialization: "Concrete Technology"
     },
     {
       name: "Dr. Prakash Kumar",
       position: "Assistant Professor",
       image: prakash,
-      specialization: "Soil Mechanics",
+      specialization: "Soil Mechanics"
     },
 
     {
       name: "Dr. Nishikant Kumar",
       position: "Assistant Professor",
       image: nishikant,
-      specialization: "Building Materials",
+      specialization: "Building Materials"
     },
     {
       name: "Dr. Prashant Malvia",
       position: "Assistant Professor",
       image: prashantmalvia,
-      specialization: "Transportation Planning",
+      specialization: "Transportation Planning"
     },
     {
       name: "Dr. Nipen Das",
       position: "Assistant Professor",
-      image: nipen,
-      specialization: "Geotechnical Engineering",
+      image: nipendas,
+      specialization: "Geotechnical Engineering"
     },
     {
       name: "Dr. Komal Kumari",
       position: "Assistant Professor",
       image: komal,
-      specialization: "Environmental Science",
+      specialization: "Environmental Science"
     },
     {
       name: "Dr. Iqbal Sheikh",
       position: "Assistant Professor",
       image: iqbal_sheikh,
-      specialization: "Structural Dynamics",
+      specialization: "Structural Dynamics"
     },
     {
       name: "Dr. Abhijeet Anand",
       position: "Assistant Professor",
       image: abhijeet_anand,
-      specialization: "Construction Technology",
+      specialization: "Construction Technology"
     }
   ];
 
@@ -222,16 +222,7 @@ const Faculty = () => {
                     <p className="text-blue-600 font-semibold mb-3">{faculty.position}</p>
                     <p className="text-slate-600 text-sm mb-3">{faculty.specialization}</p>
 
-                    {/* Contact Info */}
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Mail className="w-4 h-4 mr-2" />
-                        <span className="truncate">{faculty.email}</span>
-                      </div>
-                      <div className="flex items-center justify-center text-slate-500 text-sm">
-                        
-                      </div>
-                    </div>
+                    
 
 
                   </div>
