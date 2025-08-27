@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: acebit-sindri-website
+    env: node
+    plan: free
+    buildCommand: npm ci --legacy-peer-deps --production=false && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CI
+        value: false
+    autoDeploy: true
+    branch: main 

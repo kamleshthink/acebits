@@ -1,0 +1,203 @@
+/* Original navbar styles - commented out for dynamic navbar */
+/*
+.navbar-nav .nav-link {
+  color: #3d4d59 !important;
+  font-size: 14px;
+  padding: 12px 15px !important;
+  font-weight: 600;
+}
+.navbar-nav .nav-link:hover {
+  color: #000 !important;
+}
+
+.navbar-nav .nav-link.sign-up-nav {
+  background: #0d6efd;
+  padding: 12px 25px !important;
+  color: #fff !important;
+  border-radius: 20px;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.21) !important;
+}
+*/
+
+/* Dynamic navbar styles with smooth blend */
+.navbar-dynamic {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+/* Default navbar (black with transparency) */
+.navbar-default,
+.navbar-default.navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-default .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 14px;
+  padding: 12px 15px !important;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.navbar-default .navbar-nav .nav-link:hover {
+  color: #60a5fa !important;
+  transform: translateY(-1px);
+}
+
+.navbar-default .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-default .navbar-nav .nav-link:hover::after {
+  width: 60%;
+}
+
+.navbar-default .navbar-nav .nav-link.sign-up-nav {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 12px 25px !important;
+  color: #fff !important;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-nav .nav-link.sign-up-nav:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Scrolled navbar (white with smooth blend) */
+.navbar-scrolled,
+.navbar-scrolled.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-scrolled .navbar-nav .nav-link {
+  color: #1f2937 !important;
+  font-size: 14px;
+  padding: 12px 15px !important;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.navbar-scrolled .navbar-nav .nav-link:hover {
+  color: #3b82f6 !important;
+  transform: translateY(-1px);
+}
+
+.navbar-scrolled .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-scrolled .navbar-nav .nav-link:hover::after {
+  width: 60%;
+}
+
+.navbar-scrolled .navbar-nav .nav-link.sign-up-nav {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 12px 25px !important;
+  color: #fff !important;
+  border-radius: 25px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled .navbar-nav .nav-link.sign-up-nav:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+.dropdown-toggle:after {
+  display: none;
+}
+
+/* Bootstrap Override Rules */
+.navbar-dynamic.navbar {
+  background: transparent !important;
+}
+
+/* Force override React Bootstrap styles */
+.navbar-default.navbar,
+.navbar-default.navbar.bg-dark,
+.navbar-default.navbar.bg-light {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+.navbar-scrolled.navbar,
+.navbar-scrolled.navbar.bg-dark,
+.navbar-scrolled.navbar.bg-light {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Ensure text colors override */
+.navbar-default .navbar-nav .nav-link,
+.navbar-default .navbar-nav .nav-link.active {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar-scrolled .navbar-nav .nav-link,
+.navbar-scrolled .navbar-nav .nav-link.active {
+  color: #1f2937 !important;
+}
+
+/* Mobile responsive styles for Constitution */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 11px !important;
+    padding: 6px 8px !important;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  .navbar-brand img {
+    width: 60px !important;
+  }
+  
+  .navbar {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    font-size: 10px !important;
+    padding: 4px 6px !important;
+    min-width: 70px;
+  }
+  
+  .navbar-brand img {
+    width: 50px !important;
+  }
+}
