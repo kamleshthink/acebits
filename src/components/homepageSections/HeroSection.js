@@ -59,10 +59,7 @@ const HeroSection = () => {
             <Col lg={8} className="text-center text-white">
               <div className="animate-fade-in">
                 {/* Badge */}
-                <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-xs sm:text-sm font-medium mb-2 animate-slide-up">
-                  <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                  Premier Civil Engineering Association
-                </div>
+                
 
                 {/* Main Heading */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading mb-3 md:mb-6 leading-tight animate-slide-up" style={{animationDelay: '0.2s'}}>
