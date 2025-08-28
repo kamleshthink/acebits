@@ -195,11 +195,7 @@ const MobileNavItem = ({ item, onClose, scrolled }) => {
       <div>
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className={`flex items-center justify-between w-full px-3 sm:px-4 py-2.5 sm:py-3 text-left rounded-xl transition-all duration-300 ${
-            scrolled 
-              ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
-              : 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50'
-          }`}
+          className="flex items-center justify-between w-full px-3 sm:px-4 py-2.5 sm:py-3 text-left rounded-xl transition-all duration-300 text-gray-800 hover:text-blue-600 hover:bg-blue-100/50 font-semibold"
         >
           <div className="flex items-center space-x-2 sm:space-x-3">
             <item.icon size={20} className="sm:w-6 sm:h-6 drop-shadow-lg" />
@@ -212,20 +208,16 @@ const MobileNavItem = ({ item, onClose, scrolled }) => {
         </button>
         
         {isDropdownOpen && (
-          <div className="ml-6 sm:ml-8 mt-2 space-y-1 animate-slide-up">
+          <div className="ml-6 sm:ml-8 mt-2 space-y-1 animate-slide-up bg-white/90 backdrop-blur-sm rounded-xl p-2 border border-gray-200/50 shadow-lg">
             {item.dropdown.map((dropdownItem, index) => (
               <a
                 key={index}
                 href={dropdownItem.href}
                 onClick={onClose}
-                className={`flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg transition-all duration-300 ${
-                  scrolled 
-                    ? 'text-gray-700 hover:text-blue-600 hover:bg-blue-100/50' 
-                    : 'text-blue-100 hover:text-yellow-200 hover:bg-white/20'
-                }`}
+                className="flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg transition-all duration-300 text-gray-800 hover:text-blue-600 hover:bg-blue-100/50 font-medium"
               >
                 <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-                <span className="text-sm sm:text-base font-medium">{dropdownItem.name}</span>
+                <span className="text-sm sm:text-base">{dropdownItem.name}</span>
               </a>
             ))}
           </div>
@@ -238,11 +230,7 @@ const MobileNavItem = ({ item, onClose, scrolled }) => {
     <a
       href={item.href}
       onClick={onClose}
-      className={`flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl transition-all duration-300 ${
-        scrolled 
-          ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
-          : 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50'
-      }`}
+      className="flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl transition-all duration-300 text-gray-800 hover:text-blue-600 hover:bg-blue-100/50 font-medium"
     >
       <item.icon size={20} className="sm:w-6 sm:h-6 drop-shadow-lg" />
       <span className="text-sm sm:text-base font-medium drop-shadow-sm">{item.name}</span>

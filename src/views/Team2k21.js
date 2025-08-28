@@ -5,7 +5,7 @@ import {
   Award, 
   Star, 
   Linkedin,
-  Mail,
+  // Mail,
   Heart,
   Target,
   TrendingUp,
@@ -46,182 +46,182 @@ const Team2k21 = () => {
       position: "Counselling Team",
       image: ashish_jha,
       linkedin: "https://linkedin.com/in/ashish-jha",
-      email: "ashish.jha@bitsindri.ac.in"
+      // email: "ashish.jha@bitsindri.ac.in"
     },
     {
       name: "Amarnath",
       position: "Operational Team",
       image: amarnath,
       linkedin: "https://linkedin.com/in/amarnath",
-      email: "amarnath@bitsindri.ac.in"
+      // email: "amarnath@bitsindri.ac.in"
     },
     {
       name: "Sanya Deo",
       position: "Operational Team",
       image: sanya_deo,
       linkedin: "https://linkedin.com/in/sanya-deo",
-      email: "sanya.deo@bitsindri.ac.in"
+      // email: "sanya.deo@bitsindri.ac.in"
     },
     {
       name: "Prince Michael",
       position: "Industrial relation Team",
       image: princemichal,
       linkedin: "https://linkedin.com/in/prince-michael",
-      email: "prince.michael@bitsindri.ac.in"
+      // email: "prince.michael@bitsindri.ac.in"
     },
     {
       name: "Shruti Roy",
       position: "Industrial relation Team",
       image: shrutiroy,
       linkedin: "https://linkedin.com/in/shruti-roy",
-      email: "shruti.roy@bitsindri.ac.in"
+      // email: "shruti.roy@bitsindri.ac.in"
     },
     {
       name: "Rudra",
       position: "Alumni relation Team",
       image: rudra,
       linkedin: "https://linkedin.com/in/rudra",
-      email: "rudra@bitsindri.ac.in"
+      // email: "rudra@bitsindri.ac.in"
     },
     {
       name: "Ajay Mahato",
       position: "Designing Team",
       image: ajaymahato,
       linkedin: "https://linkedin.com/in/ajay-mahato",
-      email: "ajay.mahato@bitsindri.ac.in"
+      // email: "ajay.mahato@bitsindri.ac.in"
     },
     {
       name: "Gautam",
       position: "Designing Team",
       image: gautam,
       linkedin: "https://linkedin.com/in/gautam",
-      email: "gautam@bitsindri.ac.in"
+      // email: "gautam@bitsindri.ac.in"
     },
     {
       name: "Mehar Talat",
       position: "Designing Team",
       image: mehartalat,
       linkedin: "https://linkedin.com/in/mehar-talat",
-      email: "mehar.talat@bitsindri.ac.in"
+      // email: "mehar.talat@bitsindri.ac.in"
     },
     {
       name: "Abhipriya",
       position: "Editorial Team",
       image: abhipriya,
       linkedin: "https://linkedin.com/in/abhipriya",
-      email: "abhipriya@bitsindri.ac.in"
+      // email: "abhipriya@bitsindri.ac.in"
     },
     {
       name: "Ayushi",
       position: "Editorial Team",
       image: ayushi,
       linkedin: "https://linkedin.com/in/ayushi",
-      email: "ayushi@bitsindri.ac.in"
+      // email: "ayushi@bitsindri.ac.in"
     },
     {
       name: "Sakshi",
       position: "Research & Application",
       image: sakshi,
       linkedin: "https://linkedin.com/in/sakshi",
-      email: "sakshi@bitsindri.ac.in"
+      // email: "sakshi@bitsindri.ac.in"
     },
     {
       name: "Anurag",
       position: "Ideation Team",
       image: anurag,
       linkedin: "https://linkedin.com/in/anurag",
-      email: "anurag@bitsindri.ac.in"
+      // email: "anurag@bitsindri.ac.in"
     },
     {
       name: "Vicky",
       position: "Public Relation Team",
       image: vicky,
       linkedin: "https://linkedin.com/in/vicky",
-      email: "vicky@bitsindri.ac.in"
+      // email: "vicky@bitsindri.ac.in"
     },
     {
       name: "Dimple",
       position: "Public Relation Team",
       image: dimple,
       linkedin: "https://linkedin.com/in/dimple",
-      email: "dimple@bitsindri.ac.in"
+      // email: "dimple@bitsindri.ac.in"
     },
     {
       name: "Sagar Saw",
       position: "GATe-ESE Forum",
       image: sagarsaw,
       linkedin: "https://linkedin.com/in/sagar-saw",
-      email: "sagar.saw@bitsindri.ac.in"
+      // email: "sagar.saw@bitsindri.ac.in"
     },
     {
       name: "Shivam",
       position: "Ideation Team",
       image: shivam,
       linkedin: "https://linkedin.com/in/shivam",
-      email: "shivam@bitsindri.ac.in"
+      // email: "shivam@bitsindri.ac.in"
     },
     {
       name: "Khushboo",
       position: "Research & Application",
       image: khusboo,
       linkedin: "https://linkedin.com/in/khushboo",
-      email: "khushboo@bitsindri.ac.in"
+      // email: "khushboo@bitsindri.ac.in"
     },
     {
       name: "Sakshi Dhan",
       position: "Research & Application",
       image: sakshidhan,
       linkedin: "https://linkedin.com/in/sakshi-dhan",
-      email: "sakshi.dhan@bitsindri.ac.in"
+      // email: "sakshi.dhan@bitsindri.ac.in"
     },
     {
       name: "Rajshree",
       position: "Alumni relation Team",
       image: rajshree,
       linkedin: "https://linkedin.com/in/rajshree",
-      email: "rajshree@bitsindri.ac.in"
+      // email: "rajshree@bitsindri.ac.in"
     },
     {
       name: "Aditya Anand",
       position: "Social Media Team",
       image: aditya,
       linkedin: "https://linkedin.com/in/aditya-anand",
-      email: "aditya.anand@bitsindri.ac.in"
+      // email: "aditya.anand@bitsindri.ac.in"
     },
     {
       name: "Sagar Saurabh",
       position: "Social Media Team",
       image: sagar,
       linkedin: "https://linkedin.com/in/sagar-saurabh",
-      email: "sagar.saurabh@bitsindri.ac.in"
+      // email: "sagar.saurabh@bitsindri.ac.in"
     },
     {
       name: "Lakshmi Kumari",
       position: "Operational Team",
       image: laxmi,
       linkedin: "https://linkedin.com/in/lakshmi-kumari",
-      email: "lakshmi.kumari@bitsindri.ac.in"
+      // email: "lakshmi.kumari@bitsindri.ac.in"
     },
     {
       name: "Kunal",
       position: "Alumni relation Team",
       image: kunal,
       linkedin: "https://linkedin.com/in/kunal",
-      email: "kunal@bitsindri.ac.in"
+      // email: "kunal@bitsindri.ac.in"
     },
     {
       name: "Prabhat",
       position: "Marketing Team",
       image: prabhat,
       linkedin: "https://linkedin.com/in/prabhat",
-      email: "prabhat@bitsindri.ac.in"
+      // email: "prabhat@bitsindri.ac.in"
     },
     {
       name: "Suman Toppo",
       position: "CoEditorial Team",
       image: suman_topo,
       linkedin: "https://linkedin.com/in/suman-toppo",
-      email: "suman.toppo@bitsindri.ac.in"
+      // email: "suman.toppo@bitsindri.ac.in"
     }
   ];
 
@@ -336,8 +336,8 @@ const Team2k21 = () => {
                     {/* Contact Info */}
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Mail className="w-4 h-4 mr-2" />
-                        <span className="truncate">{member.email}</span>
+                                        {/* <Mail className="w-4 h-4 mr-2" />
+                <span className="truncate">{member.email}</span> */}
                       </div>
                       <div className="flex items-center justify-center text-slate-500 text-sm">
                         

@@ -5,7 +5,7 @@ import {
   Award, 
   Star, 
   Linkedin,
-  Mail,
+  // Mail,
   Heart,
   Target,
   TrendingUp,
@@ -37,119 +37,119 @@ const Team2k20 = () => {
       position: "President",
       image: president,
       linkedin: "https://www.linkedin.com/in/adarsh-sah-92a966182/",
-      email: "adarsh.sah@bitsindri.ac.in"
+      // email: "adarsh.sah@bitsindri.ac.in"
     },
     {
       name: "Sourav Anand",
       position: "Vice President",
       image: vicePresident1,
       linkedin: "https://www.linkedin.com/in/sourav-anand-99a7a1202/",
-      email: "sourav.anand@bitsindri.ac.in"
+      // email: "sourav.anand@bitsindri.ac.in"
     },
     {
       name: "Uma Dutta",
       position: "Vice President",
       image: vicePresident2,
       linkedin: "https://www.linkedin.com/in/uma-dutta-69ab8a228/",
-      email: "uma.dutta@bitsindri.ac.in"
+      // email: "uma.dutta@bitsindri.ac.in"
     },
     {
       name: "Ashish Ujjwal Thakur",
       position: "Joint Secretary",
       image: js1,
       linkedin: "https://www.linkedin.com/in/ashish-ujjwal-thakur-71633b217/",
-      email: "ashish.thakur@bitsindri.ac.in"
+      // email: "ashish.thakur@bitsindri.ac.in"
     },
     {
       name: "Shabnam Kumari",
       position: "Joint Secretary",
       image: js2,
       linkedin: "https://www.linkedin.com/in/shabnam-kumari-005032241/",
-      email: "shabnam.kumari@bitsindri.ac.in"
+      // email: "shabnam.kumari@bitsindri.ac.in"
     },
     {
       name: "Rajan Kumar",
       position: "Treasurer",
       image: trsr,
       linkedin: "https://www.linkedin.com/in/",
-      email: "rajan.kumar@bitsindri.ac.in"
+      // email: "rajan.kumar@bitsindri.ac.in"
     },
     {
       name: "Harsh Kr. Chourasia",
       position: "Joint Treasurer",
       image: jtrsr,
       linkedin: "https://www.linkedin.com/in/harsh-chourasia-a405a320b/",
-      email: "harsh.chourasia@bitsindri.ac.in"
+      // email: "harsh.chourasia@bitsindri.ac.in"
     },
     {
       name: "Dharmveer Mahtha",
       position: "Technical Head",
       image: techhead,
       linkedin: "www.linkedin.com/in/dharm-veer-043743221",
-      email: "dharmveer.mahtha@bitsindri.ac.in"
+      // email: "dharmveer.mahtha@bitsindri.ac.in"
     },
     {
       name: "Amisha Rani",
       position: "Marketing Head",
       image: mh,
       linkedin: "https://www.linkedin.com/in/amisha-rani-817458205/",
-      email: "amisha.rani@bitsindri.ac.in"
+      // email: "amisha.rani@bitsindri.ac.in"
     },
     {
       name: "Sushanto Shekhar",
       position: "Marketing Head",
       image: ch,
       linkedin: "https://www.linkedin.com/in/sushanto-shekhar/",
-      email: "sushanto.shekhar@bitsindri.ac.in"
+      // email: "sushanto.shekhar@bitsindri.ac.in"
     },
     {
       name: "Rohit Kumar",
       position: "Research & Development Head",
       image: rd,
       linkedin: "https://www.linkedin.com/in/rohit-kumar-b77260216/",
-      email: "rohit.kumar@bitsindri.ac.in"
+      // email: "rohit.kumar@bitsindri.ac.in"
     },
     {
       name: "Jitendra Rajwar",
       position: "GATE & ESE Forum Head",
       image: gate,
       linkedin: "https://www.linkedin.com/in/jitendra-rajwar-aa86b4230/",
-      email: "jitendra.rajwar@bitsindri.ac.in"
+      // email: "jitendra.rajwar@bitsindri.ac.in"
     },
     {
       name: "Aditya",
       position: "Editorial Head",
       image: edtorl,
       linkedin: "https://www.linkedin.com/in/",
-      email: "aditya@bitsindri.ac.in"
+      // email: "aditya@bitsindri.ac.in"
     },
     {
       name: "Sumit",
       position: "Alumni Coordinator",
       image: alumini,
       linkedin: "https://www.linkedin.com/in/",
-      email: "sumit@bitsindri.ac.in"
+      // email: "sumit@bitsindri.ac.in"
     },
     {
       name: "Professional Head",
       position: "Professional Head",
       image: pro,
       linkedin: "https://www.linkedin.com/in/",
-      email: "professional@bitsindri.ac.in"
+      // email: "professional@bitsindri.ac.in"
     },
     {
       name: "Social Head",
       position: "Social Head",
       image: sh,
       linkedin: "https://www.linkedin.com/in/",
-      email: "social@bitsindri.ac.in"
+      // email: "social@bitsindri.ac.in"
     },
     {
       name: "Sahabuddin",
       position: "Event Planning Head",
       image: eph,
       linkedin: "https://www.linkedin.com/in/",
-      email: "sahabuddin@bitsindri.ac.in"
+      // email: "sahabuddin@bitsindri.ac.in"
     }
   ];
 
@@ -259,8 +259,8 @@ const Team2k20 = () => {
                     {/* Contact Info */}
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Mail className="w-4 h-4 mr-2" />
-                        <span className="truncate">{member.email}</span>
+                                        {/* <Mail className="w-4 h-4 mr-2" />
+                <span className="truncate">{member.email}</span> */}
                       </div>
                       <div className="flex items-center justify-center text-slate-500 text-sm">
                         
