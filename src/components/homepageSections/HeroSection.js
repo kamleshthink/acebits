@@ -63,7 +63,7 @@ const HeroSection = () => {
 
                 {/* Main Heading */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading mb-3 md:mb-6 leading-tight animate-slide-up" style={{animationDelay: '0.2s'}}>
-                  <span className="text-white drop-shadow-[0_4px_12px_rgba(255,255,255,0.6)] font-extrabold tracking-wide relative block mb-2 animate-pulse">
+                  <span className="text-white drop-shadow-[0_4px_12px_rgba(255,255,255,0.6)] font-extrabold tracking-wide relative block mb-2">
                     Welcome to
                   </span>
                   <span className="block">
