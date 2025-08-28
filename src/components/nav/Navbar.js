@@ -13,14 +13,14 @@ const Navbar = () => {
       const scrollThreshold = heroHeight * 0.8; // 80% of hero height for better transition
       
       if (window.scrollY > scrollThreshold) {
-        setScrolled(true); // White navbar when scrolled down
+        setScrolled(true); // White with light blue when scrolled down
       } else {
-        setScrolled(false); // Black navbar on hero section
+        setScrolled(false); // White with light blue sky on hero section
       }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
+  }, []);
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
@@ -56,10 +56,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-xl shadow-2xl border-b ${
         scrolled 
-          ? 'bg-gradient-to-r from-blue-50/95 via-white/95 to-blue-50/95 backdrop-blur-xl shadow-2xl border-b border-blue-200/50' 
-          : 'bg-gradient-to-r from-gray-900/90 via-black/85 to-gray-900/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] border-b border-gray-300/30'
+          ? 'bg-gradient-to-r from-blue-50/95 via-white/95 to-blue-50/95 border-blue-200/50' 
+          : 'bg-gradient-to-r from-sky-100/95 via-white/95 to-sky-100/95 border-sky-200/50'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,14 +76,10 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <span className={`text-lg sm:text-xl lg:text-3xl font-bold font-heading ${
-                scrolled ? 'text-gray-800' : 'text-white'
-              }`}>
+              <span className="text-lg sm:text-xl lg:text-3xl font-bold font-heading text-gray-800">
                 ACE BITS
               </span>
-              <div className={`text-xs sm:text-sm lg:text-sm font-medium ${
-                scrolled ? 'text-blue-600' : 'text-gray-200'
-              }`}>
+              <div className="text-xs sm:text-sm lg:text-sm font-medium text-blue-600">
                 Association of Civil Engineers
               </div>
             </div>
@@ -99,9 +95,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleNavbar}
-            className={`lg:hidden p-2 sm:p-3 rounded-xl hover:scale-95 transition-all duration-300 ${
-              scrolled ? 'text-gray-800 hover:bg-gray-200/50' : 'text-white hover:bg-white/20'
-            }`}
+            className="lg:hidden p-2 sm:p-3 rounded-xl hover:scale-95 transition-all duration-300 text-gray-800 hover:bg-gray-200/50"
           >
             {isOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
           </button>
@@ -114,7 +108,7 @@ const Navbar = () => {
           className={`lg:hidden backdrop-blur-xl border-t animate-slide-down z-50 ${
             scrolled 
               ? 'bg-gradient-to-b from-blue-50/95 via-white/95 to-blue-50/95 border-blue-200/50' 
-              : 'bg-gradient-to-b from-gray-900/90 via-black/85 to-gray-900/90 border-gray-300/30'
+              : 'bg-gradient-to-b from-sky-100/95 via-white/95 to-sky-100/95 border-sky-200/50'
           }`}
         >
           <div className="px-3 sm:px-4 py-4 sm:py-6 space-y-1 sm:space-y-2 max-h-[75vh] overflow-y-auto">
@@ -137,11 +131,11 @@ const NavItem = ({ item, scrolled }) => {
         <button
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
-                  className={`flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 ${
-          scrolled 
-            ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
-            : 'text-white hover:text-gray-200 hover:bg-white/20'
-        }`}
+          className={`flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 ${
+            scrolled 
+              ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
+              : 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50'
+          }`}
         >
           <item.icon size={20} className="drop-shadow-lg" />
           <span className="drop-shadow-sm">{item.name}</span>
@@ -184,7 +178,7 @@ const NavItem = ({ item, scrolled }) => {
       className={`flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 ${
         scrolled 
           ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
-          : 'text-white hover:text-gray-200 hover:bg-white/20'
+          : 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50'
       }`}
     >
       <item.icon size={20} className="drop-shadow-lg" />
@@ -204,7 +198,7 @@ const MobileNavItem = ({ item, onClose, scrolled }) => {
           className={`flex items-center justify-between w-full px-3 sm:px-4 py-2.5 sm:py-3 text-left rounded-xl transition-all duration-300 ${
             scrolled 
               ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
-              : 'text-white hover:text-gray-200 hover:bg-white/20'
+              : 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50'
           }`}
         >
           <div className="flex items-center space-x-2 sm:space-x-3">
@@ -247,7 +241,7 @@ const MobileNavItem = ({ item, onClose, scrolled }) => {
       className={`flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl transition-all duration-300 ${
         scrolled 
           ? 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50' 
-          : 'text-white hover:text-gray-200 hover:bg-white/20'
+          : 'text-gray-800 hover:text-blue-600 hover:bg-blue-100/50'
       }`}
     >
       <item.icon size={20} className="sm:w-6 sm:h-6 drop-shadow-lg" />

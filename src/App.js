@@ -7,7 +7,7 @@ import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { currentUser } from "./api/auth";
 import { AdminRoutes, CommonRoutes, UserRoutes } from "./routes";
-import { LoadingOutlined } from "@ant-design/icons";
+
 import Navbar from "./components/nav/Navbar"
 
 const { Header, Footer } = lazily(() => import("./components"));
@@ -43,14 +43,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <Suspense
-      fallback={
-        <div style={{ position: "fixed", left: "45vw", top: "45vh" }}>
-          __ P
-          <LoadingOutlined />M __
-        </div>
-      }
-    >
+    <Suspense fallback={null}>
       {/* <Header /> */}
       <Navbar/>
       <ToastContainer />

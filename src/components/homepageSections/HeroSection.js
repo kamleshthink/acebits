@@ -65,7 +65,6 @@ const HeroSection = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading mb-3 md:mb-6 leading-tight animate-slide-up" style={{animationDelay: '0.2s'}}>
                   <span className="text-white drop-shadow-[0_4px_12px_rgba(255,255,255,0.6)] font-extrabold tracking-wide relative block mb-2 animate-pulse">
                     Welcome to
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-sm -z-10 animate-pulse"></div>
                   </span>
                   <span className="block">
                     <span className="bg-gradient-to-r from-blue-300 via-blue-200 to-indigo-300 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(59,130,246,0.25)]">
