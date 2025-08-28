@@ -63,14 +63,14 @@ const HeroSection = () => {
 
                 {/* Main Heading */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading mb-3 md:mb-6 leading-tight animate-slide-up" style={{animationDelay: '0.2s'}}>
-                  <span className="text-white drop-shadow-[0_4px_12px_rgba(255,255,255,0.6)] font-extrabold tracking-wide relative block mb-2">
+                  <span className="text-white font-extrabold tracking-wide relative block mb-2">
                     Welcome to
                   </span>
                   <span className="block">
-                    <span className="bg-gradient-to-r from-blue-300 via-blue-200 to-indigo-300 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(59,130,246,0.25)]">
+                    <span className="bg-gradient-to-r from-white via-sky-200 to-sky-300 bg-clip-text text-transparent font-extrabold tracking-wide">
                       {partOne.slice(0, partOneShownLength)}
                     </span>
-                    <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(234,179,8,0.25)]">
+                    <span className="bg-gradient-to-r from-sky-300 to-sky-400 bg-clip-text text-transparent font-extrabold tracking-wide ml-2">
                       {partTwo.slice(0, partTwoShownLength)}
                     </span>
                     {!isComplete && (
