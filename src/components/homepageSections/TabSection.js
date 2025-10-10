@@ -28,9 +28,9 @@ const TabSection = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   const animatedWords = [
-    { word: "construct", color: "from-blue-400 to-cyan-500", displayWord: "onstruct" },
-    { word: "communicate", color: "from-green-400 to-emerald-500", displayWord: "ommunicate" },
-    { word: "coordinate", color: "from-purple-400 to-pink-500", displayWord: "oordinate" }
+    { word: "Construct", color: "from-blue-400 to-cyan-500", displayWord: "onstruct" },
+    { word: "Communicate", color: "from-green-400 to-emerald-500", displayWord: "ommunicate" },
+    { word: "Coordinate", color: "from-purple-400 to-pink-500", displayWord: "oordinate" }
   ];
 
 

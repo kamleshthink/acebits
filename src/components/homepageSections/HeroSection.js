@@ -12,28 +12,43 @@ const HeroSection = () => {
     { icon: Users, title: "Community", desc: "Strong alumni network" }
   ];
 
-  // Typing animation for the title: "Association of Civil Engineers"
+  // Typing animation for the title: "Association of Civil Engineers" (continuous loop)
   const partOne = useMemo(() => "Association of ", []);
   const partTwo = useMemo(() => "Civil Engineers", []);
-  const [typedCount, setTypedCount] = useState(0);
+  const totalLength = partOne.length + partTwo.length;
+  const [shownCount, setShownCount] = useState(0); // how many characters to show from combined string
+  const [phase, setPhase] = useState('typing'); // 'typing' | 'pausing' | 'deleting'
 
   useEffect(() => {
-    const totalLength = partOne.length + partTwo.length;
-    const interval = setInterval(() => {
-      setTypedCount((prev) => {
-        if (prev >= totalLength) {
-          clearInterval(interval);
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, 65);
-    return () => clearInterval(interval);
-  }, [partOne.length, partTwo.length]);
+    const typeMs = 70;      // typing speed
+    const deleteMs = 40;    // deleting speed
+    const pauseEndMs = 1000;  // pause after full typed
+    const pauseStartMs = 600; // pause before re-typing after deletion
 
-  const partOneShownLength = Math.min(typedCount, partOne.length);
-  const partTwoShownLength = Math.max(typedCount - partOne.length, 0);
-  const isComplete = typedCount >= partOne.length + partTwo.length;
+    let timeoutId;
+
+    if (phase === 'typing') {
+      if (shownCount < totalLength) {
+        timeoutId = setTimeout(() => setShownCount(shownCount + 1), typeMs);
+      } else {
+        timeoutId = setTimeout(() => setPhase('pausing'), pauseEndMs);
+      }
+    } else if (phase === 'pausing') {
+      timeoutId = setTimeout(() => setPhase('deleting'), pauseEndMs);
+    } else if (phase === 'deleting') {
+      if (shownCount > 0) {
+        timeoutId = setTimeout(() => setShownCount(shownCount - 1), deleteMs);
+      } else {
+        timeoutId = setTimeout(() => setPhase('typing'), pauseStartMs);
+      }
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [phase, shownCount, totalLength]);
+
+  // derive how many chars of each part to show from combined shownCount
+  const partOneCount = Math.min(shownCount, partOne.length);
+  const partTwoCount = Math.max(0, Math.min(shownCount - partOne.length, partTwo.length));
 
   return (
     <div className="relative min-h-[72vh] md:min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 overflow-hidden pt-16 md:pt-0">
@@ -63,19 +78,19 @@ const HeroSection = () => {
 
                 {/* Main Heading */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading mb-3 md:mb-6 leading-tight animate-slide-up" style={{animationDelay: '0.2s'}}>
+                  {/* Welcome to - Static White */}
                   <span className="text-white font-extrabold tracking-wide relative block mb-2">
                     Welcome to
                   </span>
+                  
+                  {/* Association of Civil Engineers - Continuous Typing */}
                   <span className="block">
-                    <span className="bg-gradient-to-r from-white via-sky-200 to-sky-300 bg-clip-text text-transparent font-extrabold tracking-wide">
-                      {partOne.slice(0, partOneShownLength)}
+                    <span className={`bg-gradient-to-r from-white via-sky-200 to-sky-300 bg-clip-text text-transparent font-extrabold tracking-wide`}>
+                      {partOne.slice(0, partOneCount)}
                     </span>
-                    <span className="bg-gradient-to-r from-sky-300 to-sky-400 bg-clip-text text-transparent font-extrabold tracking-wide ml-2">
-                      {partTwo.slice(0, partTwoShownLength)}
+                    <span className={`bg-gradient-to-r from-sky-300 to-sky-400 bg-clip-text text-transparent font-extrabold tracking-wide ml-2`}>
+                      {partTwo.slice(0, partTwoCount)}
                     </span>
-                    {!isComplete && (
-                      <span className="inline-block w-3 h-7 align-middle ml-0.5 bg-white/80 animate-pulse"></span>
-                    )}
                   </span>
                 </h1>
 

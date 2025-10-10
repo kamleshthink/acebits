@@ -131,15 +131,15 @@ const Team2k20 = () => {
       // email: "sumit@bitsindri.ac.in"
     },
     {
-      name: "Professional Head",
-      position: "Professional Head",
+      name: "Abhimanyu Kumar",
+      position: "Public relation officer",
       image: pro,
       linkedin: "https://www.linkedin.com/in/",
       // email: "professional@bitsindri.ac.in"
     },
     {
-      name: "Social Head",
-      position: "Social Head",
+      name: "Hritam swami",
+      position: "Sports Head",
       image: sh,
       linkedin: "https://www.linkedin.com/in/",
       // email: "social@bitsindri.ac.in"

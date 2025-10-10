@@ -12,6 +12,9 @@ import {
   GraduationCap
 } from "lucide-react";
 
+// New image import for Rahul Kumar Saw
+import rahulSaw from "../assets/images/2k23/rahul kumar saw.jpg";
+
 // 2K23 team images - Using public folder paths with URL encoding
 const teamImages = {
   aryan: "/images/2k23/Aryan.jpg",
@@ -26,7 +29,7 @@ const teamImages = {
   rishav: "/images/2k23/rishav.jpeg",
   shashi: "/images/2k23/shashi.png",
   shreya: "/images/2k23/shreya.jpg",
-  rahul: null, // Photo not available
+  rahul: rahulSaw,
   nitish: "/images/2k23/nitish%20kumar.jpg",
   kaushal: "/images/2k23/Kaushal%20Kishore.jpg",
   pratyush: null, // Photo not available
@@ -134,7 +137,7 @@ const Team2k23 = () => {
       name: "Kamlesh Kumar Sharma",
       position: "Development Team",
       image: teamImages.kamlesh, // Photo available now
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/kamlesh-sharmathink",
       // email: "kamlesh.sharma@bitsindri.ac.in"
     },
     {
@@ -179,7 +182,7 @@ const Team2k23 = () => {
     {
       name: "Rahul Kumar Saw",
       position: "Ideation Team",
-      image: null, // Photo not available
+      image: teamImages.rahul,
       linkedin: "#",
       // email: "rahul.saw@bitsindri.ac.in"
     },
