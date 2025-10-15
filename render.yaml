@@ -4,7 +4,7 @@ services:
     name: acebit-sindri-website
     env: node
     plan: free
-    buildCommand: cd frontend && npm ci --legacy-peer-deps --production=false && npm run build
+    buildCommand: cd frontend && npm install --legacy-peer-deps && npm run build
     startCommand: cd frontend && npm start
     envVars:
       - key: NODE_ENV
@@ -30,7 +30,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 5000
+        value: 5001
       - key: MONGODB_URI
         sync: false
       - key: CORS_ORIGIN
