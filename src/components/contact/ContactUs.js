@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
+import axios from "axios";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
   MessageSquare,
   User,
   Building,
-  Star
+  Star,
+  CheckCircle,
+  AlertCircle
 } from "lucide-react";
 
 const ContactForm = () => {
@@ -20,17 +23,45 @@ const ContactForm = () => {
     message: ''
   });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setLoading(true);
+    setError('');
+    setSuccess(false);
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/contact', formData);
+
+      if (response.data.success) {
+        setSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+
+        // Scroll to top to show success message
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setError(err.response?.data?.message || 'Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -77,6 +108,32 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Success Message */}
+      {success && (
+        <div className="bg-green-50 border-l-4 border-green-500 p-6 mx-4 mt-8 rounded-lg shadow-lg animate-slide-up">
+          <div className="flex items-center">
+            <CheckCircle className="w-8 h-8 text-green-500 mr-4" />
+            <div>
+              <h3 className="text-xl font-bold text-green-800">Message Sent Successfully!</h3>
+              <p className="text-green-700 mt-1">Thank you for contacting us. We'll get back to you soon!</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Error Message */}
+      {error && (
+        <div className="bg-red-50 border-l-4 border-red-500 p-6 mx-4 mt-8 rounded-lg shadow-lg animate-slide-up">
+          <div className="flex items-center">
+            <AlertCircle className="w-8 h-8 text-red-500 mr-4" />
+            <div>
+              <h3 className="text-xl font-bold text-red-800">Failed to Send Message</h3>
+              <p className="text-red-700 mt-1">{error}</p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
         {/* Background Pattern */}
@@ -210,10 +267,20 @@ const ContactForm = () => {
 
                   <button
                     type="submit"
-                    className="group relative w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:from-blue-500 hover:to-purple-500 hover:scale-105 hover:shadow-2xl flex items-center justify-center"
+                    disabled={loading}
+                    className={`group relative w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:from-blue-500 hover:to-purple-500 hover:scale-105 hover:shadow-2xl flex items-center justify-center ${loading ? 'opacity-75 cursor-not-allowed' : ''}`}
                   >
-                    <Send className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                    Send Message
+                    {loading ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                        Send Message
+                      </>
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </button>
                 </form>
@@ -269,9 +336,11 @@ const ContactForm = () => {
                     Connect with us and start your journey towards excellence.
                   </p>
                   
-                  <button className="w-full bg-white text-blue-600 font-semibold py-3 px-4 rounded-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105">
-                    Join ACE BITS
-                  </button>
+                  <a href="/join-community" className="block">
+                    <button className="w-full bg-white text-blue-600 font-semibold py-3 px-4 rounded-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                      Join ACE BITS
+                    </button>
+                  </a>
                 </div>
               </div>
             </Col>

@@ -16,6 +16,7 @@ export { default as RISCE2024 } from "./RISCE2024";
 export { default as TestPage } from "./TestPage";
 export { default as Magazine } from "./Magazine";
 export { default as Gate } from "./Gate";
+export { default as JoinCommunity } from "./JoinCommunity";
 
 
 export { default as Team } from "./Team";

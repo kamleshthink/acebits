@@ -127,8 +127,8 @@ const HeroSectionTwo = () => {
               </div>
 
               {/* CTA Button */}
-              <button 
-                onClick={() => history.push('/contact')}
+              <button
+                onClick={() => history.push('/join-community')}
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-full text-base sm:text-lg transition-all duration-500 hover:from-blue-500 hover:to-indigo-500 hover:scale-110 hover:shadow-2xl flex items-center justify-center overflow-hidden"
               >
                 <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-pulse transition-all duration-300" />

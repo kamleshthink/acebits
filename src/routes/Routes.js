@@ -17,6 +17,7 @@ import {
   Gate,
   RISCE2024,
   TestPage,
+  JoinCommunity,
 
 } from "../views";
 import Gallery from "../components/homepageSections/Gallery";
@@ -68,6 +69,7 @@ const CommonRoutes = () => {
       <Route exact path="/forgot/password" component={ForgotPassword} />
       <Route exact path="/blogs/hyperloops" component={HyperLoop} />;
       <Route exact path="/contact" component={ContactForm} />
+      <Route exact path="/join-community" component={JoinCommunity} />
     </Switch>
   );
 };

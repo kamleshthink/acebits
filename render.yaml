@@ -1,4 +1,5 @@
 services:
+  # Frontend Web Service
   - type: web
     name: acebit-sindri-website
     env: node
@@ -12,5 +13,27 @@ services:
         value: 10000
       - key: CI
         value: false
+    autoDeploy: true
+    branch: main
+
+  # Backend Web Service
+  - type: web
+    name: acebit-backend
+    runtime: node
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://acebit-sindri-website.onrender.com
     autoDeploy: true
     branch: main 
