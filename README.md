@@ -53,9 +53,16 @@ The **Association of Civil Engineers (ACE)** at BIT Sindri is a premier student 
 - **Lucide React** - Icons
 - **React Router** - Navigation
 
-### Backend & Services
-- **Firebase** - Authentication & Database
-- **Formspree** - Contact Forms
+### Backend
+- **Express.js** - Backend Framework
+- **MongoDB** - Database
+- **Mongoose** - ODM for MongoDB
+- **CORS** - Cross-Origin Resource Sharing
+- **dotenv** - Environment Variables
+
+### Services
+- **Firebase** - Authentication
+- **Formspree** - Contact Forms (Alternative)
 - **React Helmet Async** - SEO Management
 
 ### Development Tools
@@ -73,59 +80,107 @@ The **Association of Civil Engineers (ACE)** at BIT Sindri is a premier student 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/ace-bits.git
-   cd ace-bits
+   git clone https://github.com/ACEBITSINDRI/ACEBITS.git
+   cd acebit-main
    ```
 
-2. **Install dependencies**
+2. **Install Frontend dependencies**
    ```bash
+   cd frontend
    npm install
    ```
 
-3. **Start development server**
+3. **Install Backend dependencies**
    ```bash
-   npm start
+   cd ../backend
+   npm install
    ```
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+4. **Setup environment variables**
+   ```bash
+   # In backend directory, create .env file
+   cp .env.example .env
+   # Edit .env and add your MongoDB URI
+   ```
+
+5. **Start Backend server**
+   ```bash
+   cd backend
+   npm start
+   # Backend runs on http://localhost:5000
+   ```
+
+6. **Start Frontend development server** (in new terminal)
+   ```bash
+   cd frontend
+   npm start
+   # Frontend runs on http://localhost:3000
+   ```
 
 ### Build for Production
 
+**Frontend:**
 ```bash
+cd frontend
 npm run build
+```
+
+**Backend:**
+```bash
+cd backend
+npm start
 ```
 
 ### Available Scripts
 
+**Frontend:**
 | Script | Description |
 |--------|-------------|
 | `npm start` | Starts development server |
 | `npm run build` | Creates production build |
 | `npm test` | Runs test suite |
-| `npm run eject` | Ejects from Create React App |
+
+**Backend:**
+| Script | Description |
+|--------|-------------|
+| `npm start` | Starts production server |
+| `npm run dev` | Starts development server with nodemon |
 
 ## 📁 Project Structure
 
 ```
-aceb-main/
-├── public/                 # Static assets
-├── src/
-│   ├── components/         # Reusable components
-│   │   ├── nav/           # Navigation components
-│   │   ├── Footer/        # Footer component
-│   │   └── homepageSections/ # Homepage sections
-│   ├── views/             # Page components
-│   ├── routes/            # Routing configuration
-│   ├── api/               # API services
-│   ├── assets/            # Images, videos, etc.
-│   ├── reducers/          # Redux reducers
-│   ├── App.js             # Main app component
-│   ├── index.js           # Entry point
-│   └── index.css          # Global styles
-├── tailwind.config.js     # Tailwind configuration
-├── tsconfig.json          # TypeScript configuration
-└── package.json           # Dependencies
+acebit-main/
+├── frontend/              # Frontend React Application
+│   ├── public/           # Static assets
+│   ├── src/
+│   │   ├── components/   # Reusable components
+│   │   │   ├── nav/     # Navigation components
+│   │   │   ├── Footer/  # Footer component
+│   │   │   └── homepageSections/ # Homepage sections
+│   │   ├── views/       # Page components
+│   │   ├── routes/      # Routing configuration
+│   │   ├── api/         # API services
+│   │   ├── assets/      # Images, videos, etc.
+│   │   ├── reducers/    # Redux reducers
+│   │   ├── App.js       # Main app component
+│   │   ├── index.js     # Entry point
+│   │   └── index.css    # Global styles
+│   ├── tailwind.config.js  # Tailwind configuration
+│   ├── tsconfig.json       # TypeScript configuration
+│   └── package.json        # Frontend dependencies
+│
+├── backend/               # Backend Express Application
+│   ├── config/           # Database configuration
+│   ├── controllers/      # Route controllers
+│   ├── models/           # MongoDB models
+│   ├── routes/           # API routes
+│   ├── server.js         # Express server
+│   ├── package.json      # Backend dependencies
+│   └── .env.example      # Environment variables template
+│
+├── render.yaml           # Render deployment config
+├── .gitignore           # Git ignore rules
+└── README.md            # Project documentation
 ```
 
 ## 🎨 Design System

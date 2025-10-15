@@ -4,8 +4,8 @@ services:
     name: acebit-sindri-website
     env: node
     plan: free
-    buildCommand: npm ci --legacy-peer-deps --production=false && npm run build
-    startCommand: npm start
+    buildCommand: cd frontend && npm ci --legacy-peer-deps --production=false && npm run build
+    startCommand: cd frontend && npm start
     envVars:
       - key: NODE_ENV
         value: production

@@ -52,10 +52,12 @@ const registerUser = async (req, res) => {
 
   } catch (error) {
     console.error('Registration error:', error);
+    console.error('Error details:', error.message);
 
     // Handle validation errors
     if (error.name === 'ValidationError') {
       const messages = Object.values(error.errors).map(err => err.message);
+      console.error('Validation errors:', messages);
       return res.status(400).json({
         success: false,
         message: 'Validation error',

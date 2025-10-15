@@ -58,7 +58,8 @@ const JoinCommunity = () => {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', formData);
+      const API_URL = process.env.REACT_APP_BACKEND_API || 'http://localhost:5001/api';
+      const response = await axios.post(`${API_URL}/users/register`, formData);
 
       if (response.data.success) {
         setSuccess(true);
@@ -78,7 +79,14 @@ const JoinCommunity = () => {
       }
     } catch (err) {
       console.error('Registration error:', err);
-      setError(err.response?.data?.message || 'Registration failed. Please try again.');
+      console.error('Error response:', err.response?.data);
+
+      // Handle validation errors array
+      if (err.response?.data?.errors) {
+        setError(err.response.data.errors.join(', '));
+      } else {
+        setError(err.response?.data?.message || 'Registration failed. Please try again.');
+      }
     } finally {
       setLoading(false);
     }
