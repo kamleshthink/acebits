@@ -13,6 +13,8 @@ services:
         value: 10000
       - key: CI
         value: false
+      - key: GENERATE_SOURCEMAP
+        value: false
     autoDeploy: true
     branch: main
 
