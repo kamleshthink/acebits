@@ -94,7 +94,7 @@ const ContactForm = () => {
   const teamInfo = [
     {
       role: "President",
-      name: "Prince Michael",
+      name: "Manish kumar",
       phone: "+91 6203112525",
       color: "from-yellow-500 to-orange-500"
     },
