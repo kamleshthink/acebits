@@ -1,20 +1,20 @@
 services:
-  # Frontend Web Service
-  - type: web
+  # Frontend Static Site
+  - type: static
     name: acebit-sindri-website
     env: node
     plan: free
     buildCommand: cd frontend && npm install --legacy-peer-deps && npm run build
-    startCommand: cd frontend && npm start
+    staticPublishPath: frontend/build
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
       - key: CI
         value: false
       - key: GENERATE_SOURCEMAP
         value: false
+      - key: REACT_APP_BACKEND_API
+        value: https://acebits-backend.onrender.com/api
     autoDeploy: true
     branch: main
 
