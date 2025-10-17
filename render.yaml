@@ -1,15 +1,11 @@
 services:
-  # Frontend Static Site
-  - type: static
+  # Frontend Web Service (with serve for SPA routing)
+  - type: web
     name: acebit-sindri-website
     env: node
     plan: free
     buildCommand: cd frontend && npm install --legacy-peer-deps && npm run build
-    staticPublishPath: build
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    startCommand: cd frontend && npx serve -s build -l 10000
     envVars:
       - key: NODE_ENV
         value: production
