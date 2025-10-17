@@ -59,7 +59,9 @@ const JoinCommunity = () => {
 
     try {
       const API_URL = process.env.REACT_APP_BACKEND_API || 'http://localhost:5001/api';
-      const response = await axios.post(`${API_URL}/users/register`, formData);
+      const response = await axios.post(`${API_URL}/users/register`, formData, {
+        timeout: 60000, // 60 seconds timeout for cold starts
+      });
 
       if (response.data.success) {
         setSuccess(true);
@@ -328,7 +330,7 @@ const JoinCommunity = () => {
                     {loading ? (
                       <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Registering...
+                        Processing... (This may take 30-60 seconds)
                       </>
                     ) : (
                       <>
