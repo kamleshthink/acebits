@@ -41,15 +41,16 @@ const Navbar = () => {
         { name: "2K20", href: "/team2k20" }
       ]
     },
-    { 
-      name: "Others", 
+    {
+      name: "Others",
       href: "#",
       icon: Settings,
       dropdown: [
         { name: "Constitution", href: "/constitution" },
         { name: "Magazine", href: "/magazine" },
         { name: "Contact Us", href: "/contact" },
-        { name: "Laboratory", href: "/lab" }
+        { name: "Laboratory", href: "/lab" },
+        { name: "Alumni Connect", href: "https://alumni-connect-frontend-n3ac.onrender.com/" }
       ]
     }
   ];

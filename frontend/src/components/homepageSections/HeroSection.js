@@ -102,23 +102,34 @@ const HeroSection = () => {
 
                 {/* Features */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mb-5 md:mb-8 animate-slide-up" style={{animationDelay: '0.6s'}}>
-                  {features.map((feature, index) => (
-                    <div
-                      key={index}
-                      className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left md:justify-start space-y-2 md:space-y-0 md:space-x-3 p-2 md:p-3 rounded-xl backdrop-blur-sm border border-white/5 ring-1 ring-white/3 bg-gradient-to-b from-white/5 to-white/2 overflow-hidden transform-gpu will-change-transform hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300"
-                      style={{
-                        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25), 0 12px 28px rgba(0,0,0,0.55)'
-                      }}
-                    >
-                      <span className="pointer-events-none absolute -top-6 -left-6 w-1/2 h-1/2 bg-white/5 blur-xl rounded-full opacity-50 md:opacity-25"></span>
-                      
-                      <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 mb-2" />
-                      <div className="text-center">
-                        <div className="font-semibold text-sm md:text-base text-white mb-1">{feature.title}</div>
-                        <div className="text-xs md:text-sm text-gray-300">{feature.desc}</div>
-                      </div>
-                    </div>
-                  ))}
+                  {features.map((feature, index) => {
+                    const isAlumniFeature = feature.title === "Community";
+                    const FeatureWrapper = isAlumniFeature ? 'a' : 'div';
+                    const wrapperProps = isAlumniFeature ? {
+                      href: "https://alumni-connect-frontend-n3ac.onrender.com/",
+                      target: "_blank",
+                      rel: "noopener noreferrer"
+                    } : {};
+
+                    return (
+                      <FeatureWrapper
+                        key={index}
+                        {...wrapperProps}
+                        className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left md:justify-start space-y-2 md:space-y-0 md:space-x-3 p-2 md:p-3 rounded-xl backdrop-blur-sm border border-white/5 ring-1 ring-white/3 bg-gradient-to-b from-white/5 to-white/2 overflow-hidden transform-gpu will-change-transform hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300 cursor-pointer"
+                        style={{
+                          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25), 0 12px 28px rgba(0,0,0,0.55)'
+                        }}
+                      >
+                        <span className="pointer-events-none absolute -top-6 -left-6 w-1/2 h-1/2 bg-white/5 blur-xl rounded-full opacity-50 md:opacity-25"></span>
+
+                        <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 mb-2" />
+                        <div className="text-center">
+                          <div className="font-semibold text-sm md:text-base text-white mb-1">{feature.title}</div>
+                          <div className="text-xs md:text-sm text-gray-300">{feature.desc}</div>
+                        </div>
+                      </FeatureWrapper>
+                    );
+                  })}
                 </div>
 
                 {/* CTA Buttons */}
