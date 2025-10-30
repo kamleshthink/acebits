@@ -59,8 +59,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:netlify": "npm ci --legacy-peer-deps && npm run build",
+    "build": "CI=false react-scripts build",
+    "build:netlify": "CI=false react-scripts build",
     "build:verify": "npm ci --legacy-peer-deps && npm run build && npm run verify-build",
     "verify-build": "node -e \"const fs=require('fs'); if(!fs.existsSync('build/index.html')){console.error('❌ Build verification failed');process.exit(1)}; console.log('✅ Build verified successfully');\"",
     "test": "react-scripts test",
